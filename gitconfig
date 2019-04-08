@@ -1,0 +1,50 @@
+[color]
+	ui = auto
+
+[alias]
+    s = status --short --branch
+    br = branch
+    ci = commit
+    co = checkout
+    st = status
+    rb = rebase
+    mt = mergetool
+    lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+
+[core]
+    editor = vim
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+    pager = "diff-so-fancy | less --tabs=4 -RFX"
+
+[push]
+    default = current
+
+[merge]
+    tool = vimdiff
+
+[rerere]
+    enabled = 1
+    autoupdate = 1
+
+[user]
+    email = No5stranger@gmail.com
+    name = cjp
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+
+[color "diff"]
+    meta = 227
+    frag = magenta bold
+    commit = 227 bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[diff-so-fancy]
+	stripLeadingSymbols = false
